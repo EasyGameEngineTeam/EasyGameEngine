@@ -13,17 +13,17 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="头文件\window">
-      <UniqueIdentifier>{226f4ddc-e690-4a4b-b4d2-3ea12d0243e3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="头文件\util">
       <UniqueIdentifier>{7899c510-19c7-4414-964a-c3137fb16f0e}</UniqueIdentifier>
     </Filter>
     <Filter Include="头文件\render">
       <UniqueIdentifier>{b79ed94d-d700-4746-8db6-ec2b4557d1b3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\shader">
-      <UniqueIdentifier>{c0284b4e-d441-4f81-b6e9-ee1bdcfc1555}</UniqueIdentifier>
+    <Filter Include="头文件\render\window">
+      <UniqueIdentifier>{f5a6bdc6-3dfd-4fd6-935f-26cea2c037d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\render\shader">
+      <UniqueIdentifier>{27e333e2-3c22-46cf-a829-2a0c09b7c3a6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,28 +33,34 @@
     <ClCompile Include="..\..\OPENGL\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="window\EGWindow.cpp">
-      <Filter>头文件\window</Filter>
+    <ClCompile Include="Shader.cpp">
+      <Filter>头文件\render\shader</Filter>
     </ClCompile>
-    <ClCompile Include="util\util.cpp">
+    <ClCompile Include="Window.cpp">
+      <Filter>头文件\render\window</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>头文件\render</Filter>
+    </ClCompile>
+    <ClCompile Include="util.cpp">
       <Filter>头文件\util</Filter>
-    </ClCompile>
-    <ClCompile Include="shader\Shader.cpp">
-      <Filter>头文件\shader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="window\EGWindow.h">
-      <Filter>头文件\window</Filter>
+    <ClInclude Include="Shader.h">
+      <Filter>头文件\render\shader</Filter>
     </ClInclude>
-    <ClInclude Include="util\util.h">
-      <Filter>头文件\util</Filter>
+    <ClInclude Include="Window.h">
+      <Filter>头文件\render\window</Filter>
     </ClInclude>
-    <ClInclude Include="render\IRenderer.h">
+    <ClInclude Include="IRenderer.h">
       <Filter>头文件\render</Filter>
     </ClInclude>
-    <ClInclude Include="shader\Shader.h">
-      <Filter>头文件\shader</Filter>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>头文件\render</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>头文件\util</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

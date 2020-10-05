@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../util/util.h"
+#include "util.h"
 
 namespace EasyGame {
 	class Shader {

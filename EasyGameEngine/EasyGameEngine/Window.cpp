@@ -1,4 +1,4 @@
-#include "EGWindow.h"
+#include "Window.h"
 
 namespace EasyGame {
 	DATAREAD(std::string, Title, Window)

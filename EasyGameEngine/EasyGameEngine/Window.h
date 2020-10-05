@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../render/IRenderer.h"
+#include "IRenderer.h"
 
 namespace EasyGame {
 	class Window {

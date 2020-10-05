@@ -149,15 +149,17 @@
   <ItemGroup>
     <ClCompile Include="..\..\OPENGL\glad.c" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="shader\Shader.cpp" />
-    <ClCompile Include="util\util.cpp" />
-    <ClCompile Include="window\EGWindow.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="util.cpp" />
+    <ClCompile Include="VertexBuffer.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="render\IRenderer.h" />
-    <ClInclude Include="shader\Shader.h" />
-    <ClInclude Include="util\util.h" />
-    <ClInclude Include="window\EGWindow.h" />
+    <ClInclude Include="IRenderer.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="util.h" />
+    <ClInclude Include="VertexBuffer.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
