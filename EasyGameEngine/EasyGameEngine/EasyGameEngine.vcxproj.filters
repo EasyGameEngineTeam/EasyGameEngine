@@ -22,6 +22,9 @@
     <Filter Include="头文件\render">
       <UniqueIdentifier>{b79ed94d-d700-4746-8db6-ec2b4557d1b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\shader">
+      <UniqueIdentifier>{c0284b4e-d441-4f81-b6e9-ee1bdcfc1555}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -36,6 +39,9 @@
     <ClCompile Include="util\util.cpp">
       <Filter>头文件\util</Filter>
     </ClCompile>
+    <ClCompile Include="shader\Shader.cpp">
+      <Filter>头文件\shader</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window\EGWindow.h">
@@ -46,6 +52,9 @@
     </ClInclude>
     <ClInclude Include="render\IRenderer.h">
       <Filter>头文件\render</Filter>
+    </ClInclude>
+    <ClInclude Include="shader\Shader.h">
+      <Filter>头文件\shader</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

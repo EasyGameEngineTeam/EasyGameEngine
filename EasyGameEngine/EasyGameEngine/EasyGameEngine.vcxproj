@@ -149,11 +149,13 @@
   <ItemGroup>
     <ClCompile Include="..\..\OPENGL\glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="shader\Shader.cpp" />
     <ClCompile Include="util\util.cpp" />
     <ClCompile Include="window\EGWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="render\IRenderer.h" />
+    <ClInclude Include="shader\Shader.h" />
     <ClInclude Include="util\util.h" />
     <ClInclude Include="window\EGWindow.h" />
   </ItemGroup>

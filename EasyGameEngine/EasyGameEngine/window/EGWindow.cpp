@@ -35,7 +35,7 @@ namespace EasyGame {
 		this->WindowProc = glfwCreateWindow(this->Width, this->Length, this->Title.c_str(), NULL, NULL);
 
 		if (this->WindowProc == NULL) {
-			MessageBox(NULL, TEXT("Can't create glfw window!"), TEXT("Fatal Errors!"), NULL);
+			MessageBox(NULL, L"Can't create glfw window!", L"Fatal Errors!", NULL);
 			glfwTerminate();
 			exit(-1);
 		}
@@ -43,7 +43,7 @@ namespace EasyGame {
 		glfwMakeContextCurrent(this->WindowProc);
 
 		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-			MessageBox(NULL, TEXT("Can't init glad"), TEXT("Fatal Errors!"), NULL);
+			MessageBox(NULL, L"Can't init glad", L"Fatal Errors!", NULL);
 			exit(-1);
 		}
 

@@ -16,16 +16,49 @@
 #include <algorithm>
 #include <stack>
 #include <queue>
+#include <sstream>
 
-#define DATADEF(type, name) private: type name; public: type get##name(); void set##name(type name);
-#define DATA(type, name, clazz) type clazz::get##name() {return name;} void clazz::set##name(type name) {this -> name = name;} 
-#define DATAREADDEF(type, name) private: type name; public: type get##name();
-#define DATAREAD(type, name, clazz) type clazz::get##name() {return name;}
-#define DATAWRITEDEF(type, name) private: type name; public: void set##name(type name);
-#define DATAWRITE(type, name, clazz) void clazz::set##name(type name) {this -> name = name;}
+#define DATADEF(type, name)\
+private:\
+	type name; \
+public:\
+	type get##name(); \
+	void set##name(type name);
+
+#define DATA(type, name, clazz)\
+type clazz::get##name() {\
+	return name;\
+} \
+void clazz::set##name(type name) {\
+	this -> name = name;\
+} 
+
+#define DATAREADDEF(type, name)\
+private:\
+	type name; \
+public:\
+	type get##name();
+
+#define DATAREAD(type, name, clazz)\
+type clazz::get##name() {\
+	return name;\
+}
+
+#define DATAWRITEDEF(type, name) \
+private:\
+	type name;\
+public:\
+	void set##name(type name);
+
+#define DATAWRITE(type, name, clazz)\
+void clazz::set##name(type name) {\
+	this -> name = name;\
+}
+
 #define interface class
 
 namespace EasyGame {
+
 	inline int lowbit(int x) {
 		return x & -x;
 	}
@@ -88,4 +121,28 @@ namespace EasyGame {
 			}
 		}
 	};
+
+	class ResourceLocation {
+	public:
+		struct TYPE {
+			enum Type {
+				DATA,
+				RESOURCE,
+				SOURCE,
+				CONFIG,
+				SAVE
+			};
+			static std::string toString(Type type);
+		};
+	private:
+		DATADEF(std::string, ID)
+		DATADEF(std::string, Path)
+		DATADEF(TYPE::Type, Type)
+	public:
+		ResourceLocation(std::string ID, std::string Path, TYPE::Type);
+		std::string toString();
+		std::string toPath();
+	};
+
+	ResourceLocation createLocation(std::string ID, std::string Path, ResourceLocation::TYPE::Type Type);
 }
